@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.class
 *.log
 *.jar
@@ -19,3 +20,6 @@ project/plugins/project/
 .scala_dependencies
 .worksheet
 .idea
+=======
+.idea
+>>>>>>> 27d7377782af2b8fc060a09e003fb73b765a5719
