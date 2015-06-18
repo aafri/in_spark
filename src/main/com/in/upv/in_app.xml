@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF8"?>
+<Matches>
+	
+	
+	<!--启动APP-->	
+	<stat_unit>
+		<action>position</action>
+		<description>获取服务器发送的时间戳</description>
+		<stat_type>daily</stat_type>
+		<match combine_type="and">                                                             
+			<entry field_name="request" match_type="contain"><![CDATA[/timestamp.php]]></entry>
+		</match>
+	</stat_unit>
+	
+	<stat_unit>
+		<action>position</action>
+		<description>APNS</description>
+		<stat_type>daily</stat_type>
+		<match combine_type="and">                                                             
+			<entry field_name="request" match_type="contain"><![CDATA[/api/apns]]></entry>
+		</match>
+	</stat_unit>
+	
+	<stat_unit>
+		<action>position</action>
+		<description>获取贴纸剩余次数</description>
+		<stat_type>daily</stat_type>
+		<match combine_type="and">                                                             
+			<entry field_name="request" match_type="contain"><![CDATA[/app/paster/leftcount]]></entry>
+		</match>
+	</stat_unit>
+	
+	<stat_unit>
+		<action>position</action>
+		<description>查看任务完成情况</description>
+		<stat_type>daily</stat_type>
+		<match combine_type="and">                                                             
+			<entry field_name="request" match_type="contain"><![CDATA[/app/task/status]]></entry>
+			<entry field_name="refer" match_type="contain"><![CDATA[/app/task/status]]></entry>
+			<entry field_name="hostname" match_type="contain"><![CDATA[/app/task/status]]></entry>
+			<entry field_name="request" match_type="contain"><![CDATA[/app/task/status]]></entry>
+		</match>
+	</stat_unit>
+	
+	<!--进入首页（默认进入关注页面）-->
+	<stat_unit>
+		<action>position</action>
+		<description>获取关注页面数据</description>
+		<stat_type>daily</stat_type>
+		<match combine_type="and">                                                             
+			<entry field_name="request" match_type="contain"><![CDATA[/app/home]]></entry>
+		</match>
+	</stat_unit>
+	
+	<stat_unit>
+		<action>position</action>
+		<description>最热的照片数据</description>
+		<stat_type>daily</stat_type>
+		<match combine_type="and">                                                             
+			<entry field_name="request" match_type="contain"><![CDATA[/app/home/hot]]></entry>
+		</match>
+	</stat_unit>
+	
+	<stat_unit>
+		<action>position</action>
+		<description>新消息提醒红点</description>
+		<stat_type>daily</stat_type>
+		<match combine_type="and">                                                             
+			<entry field_name="request" match_type="contain"><![CDATA[/app/notice/new]]></entry>
+		</match>
+	</stat_unit>
+	
+	<stat_unit>
+		<action>position</action>
+		<description>发现也数据</description>
+		<stat_type>daily</stat_type>
+		<match combine_type="and">                                                             
+			<entry field_name="request" match_type="contain"><![CDATA[/app/home/new]]></entry>
+		</match>
+	</stat_unit>
+	
+	<stat_unit>
+		<action>position</action>
+		<description>统计照片曝光的接口</description>
+		<stat_type>daily</stat_type>
+		<match combine_type="and">                                                             
+			<entry field_name="request" match_type="contain"><![CDATA[/onepiece/exposure.html]]></entry>
+		</match>
+	</stat_unit>
+	
+	<stat_unit>
+		<action>position</action>
+		<description>广场页</description>
+		<stat_type>daily</stat_type>
+		<match combine_type="and">                                                             
+			<entry field_name="request" match_type="contain"><![CDATA[/app/discover]]></entry>
+		</match>
+	</stat_unit>
+	
+	<stat_unit>
+		<action>position</action>
+		<description>tag/主题</description>
+		<stat_type>daily</stat_type>
+		<match combine_type="and">                                                             
+			<entry field_name="request" match_type="contain"><![CDATA[/app/photo/list]]></entry>
+		</match>
+	</stat_unit>
+	
+	<stat_unit>
+		<action>position</action>
+		<description>广场页 下滑加载 品牌照片</description>
+		<stat_type>daily</stat_type>
+		<match combine_type="and">                                                             
+			<entry field_name="request" match_type="contain"><![CDATA[/app/discover/brand]]></entry>
+		</match>
+	</stat_unit>
+	
+	<stat_unit>
+		<action>position</action>
+		<description>广场页搜索品牌或用户</description>
+		<stat_type>daily</stat_type>
+		<match combine_type="and">                                                             
+			<entry field_name="request" match_type="contain"><![CDATA[/app/search/userandbrand]]></entry>
+		</match>
+	</stat_unit>
+	
+	<stat_unit>
+		<action>position</action>
+		<description>通知页数据</description>
+		<stat_type>daily</stat_type>
+		<match combine_type="and">                                                             
+			<entry field_name="request" match_type="contain"><![CDATA[/app/notice]]></entry>
+		</match>
+	</stat_unit>
+	
+	<stat_unit>
+		<action>position</action>
+		<description>动态数据接口</description>
+		<stat_type>daily</stat_type>
+		<match combine_type="and">                                                             
+			<entry field_name="request" match_type="contain"><![CDATA[/app/feed]]></entry>
+		</match>
+	</stat_unit>
+	
+	<stat_unit>
+		<action>position</action>
+		<description>通知里的赞接口数据</description>
+		<stat_type>daily</stat_type>
+		<match combine_type="and">                                                             
+			<entry field_name="request" match_type="contain"><![CDATA[/app/notice/zan]]></entry>
+		</match>
+	</stat_unit>
+	 
+  	<!--获取贴纸剩余次数-->
+	<stat_unit>
+		<action>position</action>
+		<description>获取贴纸剩余次数</description>
+		<pvitem>8058</pvitem>
+		<uvitem>8059</uvitem>
+		<stat_type>daily</stat_type>
+		<match combine_type="and">                                                             
+			<entry field_name="request" match_type="contain"><![CDATA[/shopping/mobile]]></entry>
+		</match>
+	</stat_unit>
+		
+	
+</Matches>

@@ -1,0 +1,118 @@
+
+IN APP 所有接口一览（ Android）:
+
+启动APP：
+	/timestamp.php   获取服务器发送的时间戳
+
+	/api/apns        APNS
+	
+	/app/paster/leftcount    获取贴纸剩余次数
+	/app/task/status     查看任务完成情况
+	 
+
+进入首页（默认进入关注页面）：
+	/app/home?xx=xx    获取关注页面数据  (向下滑动也请求)
+	/app/home/hot    最热的照片数据  （包括向下滑动、切换上面的分类）   
+	/app/notice/new   新消息提醒 红点
+	/app/home/new  发现也数据   (包括向下滑动)
+	
+	/onepiece/exposure.html    统计照片曝光的接口
+	
+	/app/discover      广场页
+	
+	/app/photo/list    tag/主题  照片列表
+	
+	/app/discover/brand   广场页 下滑加载 品牌照片
+	
+	/app/search/userandbrand   广场页搜索品牌或用户
+	
+	切换到通知：
+	/app/notice         通知页数据  （包括向下滑动）
+	/app/feed            动态数据接口  （包括向下滑动）
+	/app/notice/zan   通知里的赞接口数据  （包括向下滑动）
+
+照片：
+	/app/photo/detail  照片详情页
+	/app/photo/comments   照片的评论列表（包括滑动加载）
+	/app/photo/zan          给照片点赞（取消赞）	
+	/app/photo/comment   发布评论
+	/app/photo/collect   收藏 （取消收藏）
+	/onepiece/savephoto.html    保存图片到本地 的统计
+	
+	/app/photo/share   客户端分享图片到SNS，后回调接口
+	
+	/app/photo/delcomment  删除评论
+	
+	/app/photo/del    删除 照片
+	
+TAG:
+	/app/tag           tag 照片列表
+	/app/brand/photo   品牌站
+	/app/brand/watch   关注品牌(取消关注)
+	
+	
+	
+点击拍照：
+	/app/task/status    获取任务状态
+	/app/paster/revision    获取服务端贴纸的数据戳，以决定是否请求 贴纸全量数据接口
+	/app/paster/data  		贴纸全量数据
+	
+照片处理：
+	/app/search/tag/type/biaoqing   打tag 时 搜索建议
+	/app/publish/getuploadtoken    获取 7牛 上传token 和是否上传到7牛
+	
+	/app/publish   照片发布，封装发布到7牛
+	/app/publish/photo   上传照片到 7牛 之后，后续请求服务器的接口，包括贴纸使用次数更新等
+
+
+戳人：
+	/app/poke/inwatch   IN关注好友数据（包括下滑加载）
+	/app/poke/sinawatch   新浪我关注的好友 （去大V，包括下滑加载）
+	/app/poke/contactbook   我的通讯录（包括下滑加载）
+	
+	/onepiece/showtag.html   ?
+	/app/poke/finish   戳人选择完成接口  
+	
+
+用户：
+	/app/user/profile    （其他）用户资料
+	/app/user/photo     用户 照片列表
+	/app/user/brand     用户品牌列表
+	
+进入用户中心：
+	/app/user/myphoto           我的照片
+	/app/user/mybrand		    我的品牌
+	/app/user/mycollection	我的收藏
+	/app/user/myprofile        我的个人资料
+	
+	点击编辑资料 
+	/app/user/city               获取城市列表及代码
+	/app/user/updateinfo       修改个人资料
+	
+	查找好友：
+	/app/user/inrecommend  IN推荐用户
+	/app/user/sinawatch       新浪微博好友
+	/app/user/contactbook    手机通讯录好友
+	
+	/app/user/search           输入关键词查找用户
+	
+	用户关系：
+	/app/user/watch     关注或者取消关注用户
+	
+	/app/user/myfollow  关注用户列表 （包括下滑加载）
+	/app/user/myfans    粉丝用户列表（包括下滑加载）
+	
+
+其他：
+   /app/setting/updateversion  检测新版本
+   /app/setting/introduce    关于IN
+   /app/setting/agreement  用户协议
+ 	/app/setting/portal        设置是否显示登录入口
+ 	/app/setting/sharetxt     获取分享文案的接口
+ 	/app/setting/weibo       分享到微博 可定制微博文案 和N 多 配置项的值，戳人短信、微博文案等………………
+ 	/app/setting/gtapns       个推apns信息收集
+	
+
+	
+
+	
